@@ -1,26 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight, Music4 } from 'lucide-react';
+import heroOne from '../assets/photo_2026-01-28_17-50-48.jpg';
+import heroTwo from '../assets/photo_2026-01-28_17-50-53.jpg';
+import heroThree from '../assets/photo_2026-01-28_17-50-55.jpg';
+import heroFour from '../assets/photo_2026-01-28_17-50-56.jpg';
 
 interface HeroProps {
   onOpenPlanner: () => void;
 }
 
 const Hero: React.FC<HeroProps> = ({ onOpenPlanner }) => {
+  const heroImages = [heroOne, heroTwo, heroThree, heroFour];
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % heroImages.length);
+    }, 6000);
+
+    return () => window.clearInterval(interval);
+  }, [heroImages.length]);
+
   return (
     <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-sonique-dark text-white">
-      {/* Background Video with Overlay */}
+      {/* Background Photos with Overlay */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-30"
-          poster="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop"
-        >
-          <source src="https://videos.pexels.com/video-files/7576409/7576409-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {heroImages.map((src, index) => (
+          <img
+            key={src}
+            src={src}
+            alt=""
+            aria-hidden="true"
+            loading={index === 0 ? 'eager' : 'lazy'}
+            decoding="async"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              index === activeIndex ? 'opacity-40' : 'opacity-0'
+            }`}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-to-b from-sonique-dark/90 via-sonique-dark/60 to-sonique-dark"></div>
       </div>
 
@@ -59,3 +76,4 @@ const Hero: React.FC<HeroProps> = ({ onOpenPlanner }) => {
 };
 
 export default Hero;
+/*  */

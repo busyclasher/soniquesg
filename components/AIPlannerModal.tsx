@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Loader2, Sparkles, CheckCircle, BookOpen, Music, Target, ArrowRight } from 'lucide-react';
-import { generateLessonPlan } from '../services/geminiService';
+import { generateLessonPlan, isGeminiConfigured } from '../services/geminiService';
 import { GeneratedPlan, LessonPlanRequest } from '../types';
 
 interface AIPlannerModalProps {
@@ -34,6 +34,10 @@ const AIPlannerModal: React.FC<AIPlannerModalProps> = ({ isOpen, onClose, initia
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!isGeminiConfigured()) {
+      alert('Missing Gemini API key. Set GEMINI_API_KEY in .env.local and restart the dev server.');
+      return;
+    }
     setStep('loading');
     const result = await generateLessonPlan(formData);
     if (result) {

@@ -1,11 +1,23 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { LessonPlanRequest, GeneratedPlan } from '../types';
 
-// Initialize Gemini Client
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const apiKey = (process.env.GEMINI_API_KEY || process.env.API_KEY || '').trim();
+
+const getGeminiClient = () => {
+  if (!apiKey) {
+    console.warn('Gemini API key missing. Set GEMINI_API_KEY in .env.local and restart the dev server.');
+    return null;
+  }
+  return new GoogleGenAI({ apiKey });
+};
+
+export const isGeminiConfigured = () => Boolean(apiKey);
 
 export const generateLessonPlan = async (request: LessonPlanRequest): Promise<GeneratedPlan | null> => {
   try {
+    const ai = getGeminiClient();
+    if (!ai) return null;
+
     const prompt = `
       Create a detailed 4-week introductory music lesson plan for a student.
       Details:
