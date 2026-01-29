@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MessageCircle, Menu, X } from 'lucide-react';
+import logo from './assets/logo.jpg';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import Lessons from './components/Lessons';
@@ -74,10 +75,16 @@ const App: React.FC = () => {
       <header className="fixed w-full z-50 transition-all duration-300 bg-sonique-dark/95 backdrop-blur-md shadow-lg border-b border-white/5">
           <div className="container mx-auto px-6 py-4 flex justify-between items-center">
               <div 
-                className="text-xl md:text-2xl font-header text-white tracking-widest uppercase cursor-pointer hover:text-sonique-gold transition-colors"
+                className="flex items-center gap-3 cursor-pointer"
                 onClick={() => scrollToSection('home')}
+                aria-label="Sonique Studio"
               >
-                  Sonique Studio
+                  <img 
+                    src={logo} 
+                    alt="Sonique Studio logo" 
+                    className="h-10 w-10 md:h-12 md:w-12 object-contain"
+                  />
+                  <span className="sr-only">Sonique Studio</span>
               </div>
 
               {/* Desktop Nav */}

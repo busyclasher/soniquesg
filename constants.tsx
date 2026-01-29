@@ -1,10 +1,14 @@
 import React from 'react';
 import { Award, UserCheck, Star, Zap } from 'lucide-react';
 import { Feature, Testimonial, LessonType, Teacher } from './types';
-import photoDuo from './assets/photo_2026-01-28_17-50-48.jpg';
-import photoClassical from './assets/photo_2026-01-28_17-50-53.jpg';
-import photoKeyboard from './assets/photo_2026-01-28_17-50-55.jpg';
-import photoStage from './assets/photo_2026-01-28_17-50-56.jpg';
+import teamIsaac from './assets/team-isaac.jpg';
+import teamCelestine from './assets/Celestine.jpg';
+import teamDavid from './assets/david.jpg';
+import teamJoseph from './assets/joseph.jpg';
+import lessonAcoustic from './assets/jamming-sesh.jpg';
+import lessonElectric from './assets/guitar.jpg';
+import lessonPiano from './assets/piano-lesson.jpg';
+import lessonViolin from './assets/playing-violin.jpg';
 
 export const SONIQUE_COLORS = {
   dark: '#231D1F',
@@ -14,27 +18,27 @@ export const SONIQUE_COLORS = {
 export const TEACHERS: Teacher[] = [
   {
     name: "Isaac Loo",
-    role: "Director & Guitar Mentor",
+    role: "Director & Guitar Teacher",
     qualification: "Grade 8 Distinction (Rockschool)",
-    image: photoStage
+    image: teamIsaac
   },
   {
     name: "Sarah Chen",
-    role: "Senior Piano Mentor",
+    role: "Senior Piano Teacher",
     qualification: "LRSM Diploma (Piano Performance)",
-    image: photoKeyboard
+    image: teamJoseph
   },
   {
-    name: "David Kumar",
-    role: "Violin Mentor",
+    name: "Celestine",
+    role: "Violin Teacher",
     qualification: "Bachelor of Music (Violin)",
-    image: photoDuo
+    image: teamCelestine
   },
   {
     name: "Amelia Tan",
-    role: "Classical Guitar Mentor",
+    role: "Classical Guitar Teacher",
     qualification: "ABRSM Grade 8 (Guitar)",
-    image: photoClassical
+    image: teamDavid
   }
 ];
 
@@ -43,28 +47,28 @@ export const LESSON_TYPES: LessonType[] = [
     id: 'acoustic-guitar',
     title: 'Acoustic Guitar',
     description: 'Master strumming patterns, fingerstyle techniques, and the songs you love in a relaxed setting.',
-    image: photoClassical,
+    image: lessonAcoustic,
     instrumentValue: 'Acoustic Guitar'
   },
   {
     id: 'electric-guitar',
     title: 'Electric Guitar',
     description: 'Dive into rock, blues, and pop. Learn solos, power chords, and how to dial in your tone.',
-    image: photoStage,
+    image: lessonElectric,
     instrumentValue: 'Electric Guitar'
   },
   {
     id: 'piano',
     title: 'Piano & Keyboard',
     description: 'From classical foundations to modern pop improvisation. Build a strong musical theory base.',
-    image: photoKeyboard,
+    image: lessonPiano,
     instrumentValue: 'Piano'
   },
   {
     id: 'violin',
     title: 'Violin',
     description: 'Develop proper posture, bowing techniques, and a beautiful tone with our graded curriculum.',
-    image: photoDuo,
+    image: lessonViolin,
     instrumentValue: 'Violin'
   }
 ];
@@ -97,18 +101,18 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Sarah Tan",
     role: "Parent of Caleb (9yo)",
     quote: "We struggled to find a teacher who could keep Caleb interested. Sonique's approach to mixing pop songs with proper technique changed everything. He actually practices on his own now!",
-    image: photoDuo
+    image: teamCelestine
   },
   {
     name: "Marcus Lim",
     role: "Guitar Student (16yo)",
     quote: "I wanted to learn electric guitar for my band. Isaac helped me understand the theory behind the solos I liked. The jam sessions are super fun.",
-    image: photoClassical
+    image: teamDavid
   },
   {
     name: "Priya Kumar",
     role: "Adult Piano Student",
     quote: "I was hesitant to start learning music in my 30s. The team at Sonique made it so accessible and stress-free. It's the highlight of my week.",
-    image: photoKeyboard
+    image: teamJoseph
   }
 ];

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Music4 } from 'lucide-react';
-import heroOne from '../assets/photo_2026-01-28_17-50-48.jpg';
-import heroTwo from '../assets/photo_2026-01-28_17-50-53.jpg';
-import heroThree from '../assets/photo_2026-01-28_17-50-55.jpg';
-import heroFour from '../assets/photo_2026-01-28_17-50-56.jpg';
+import heroOne from '../assets/guitar.jpg';
+import heroTwo from '../assets/piano-lesson.jpg';
+import heroThree from '../assets/violin.jpg';
+import heroFour from '../assets/jamming-sesh.jpg';
 
 interface HeroProps {
   onOpenPlanner: () => void;

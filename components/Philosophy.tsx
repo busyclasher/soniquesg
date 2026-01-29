@@ -1,5 +1,5 @@
 import React from 'react';
-import philosophyPhoto from '../assets/photo_2026-01-28_17-50-56.jpg';
+import philosophyPhoto from '../assets/pianobts.jpg';
 
 const Philosophy: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const Philosophy: React.FC = () => {
 
           <img 
             src={philosophyPhoto}
-            alt="Guitar Playing" 
+            alt="Piano mentoring session"
             className="rounded-lg shadow-2xl opacity-80 grayscale hover:grayscale-0 transition-all duration-500"
           />
         </div>
