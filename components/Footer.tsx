@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Facebook, MessageCircle, Mail, MapPin, Phone } from 'lucide-react';
+import { Instagram, Layers, MessageCircle, Mail, MapPin, Phone } from 'lucide-react';
 import logo from '../assets/sonique-logo.png';
 
 const WA_URL = 'https://wa.me/6591234567?text=Hi%2C%20I%27m%20interested%20in%20enquiring%20about%20music%20lessons%20at%20Sonique%20Studio!';
@@ -38,7 +38,9 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex gap-4 pt-2">
               <a
-                href="#"
+                href="https://www.instagram.com/soniquestudio.sg/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="w-10 h-10 flex items-center justify-center border border-gray-700 text-gray-400 hover:border-sonique-gold hover:text-sonique-gold transition-colors"
               >
@@ -46,10 +48,10 @@ const Footer: React.FC = () => {
               </a>
               <a
                 href="#"
-                aria-label="Facebook"
+                aria-label="Carousel"
                 className="w-10 h-10 flex items-center justify-center border border-gray-700 text-gray-400 hover:border-sonique-gold hover:text-sonique-gold transition-colors"
               >
-                <Facebook className="w-4 h-4" />
+                <Layers className="w-4 h-4" />
               </a>
               <a
                 href={WA_URL}

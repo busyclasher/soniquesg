@@ -7,7 +7,7 @@ import heroFour from '../assets/jamming-sesh.jpg';
 
 const HERO_IMAGES = [heroOne, heroTwo, heroThree, heroFour];
 const SLIDE_DURATION = 6000;
-const WA_URL = 'https://wa.me/6591234567?text=Hi%2C%20I%27m%20interested%20in%20a%20free%20trial%20lesson!';
+const WA_URL = 'https://wa.me/98228518?text=Hi%2C%20I%27m%20interested%20in%20a%20free%20trial%20lesson!';
 
 const Hero: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
