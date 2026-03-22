@@ -19,6 +19,8 @@ export interface LessonType {
   description: string;
   image: string;
   instrumentValue: string; // value to pass to planner
+  price: string;
+  popular?: boolean;
 }
 
 export interface LessonPlanRequest {

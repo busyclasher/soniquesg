@@ -16,28 +16,31 @@ const Team: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
-          {TEACHERS.map((teacher, index) => (
+          {TEACHERS.map((teacher, index) => {
+            const isJoseph = teacher.name === 'Joseph Law';
+            return (
             <div 
               key={index} 
-              className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col"
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-100 flex flex-col"
             >
               <div className="h-96 overflow-hidden relative">
                 <img 
                   src={teacher.image} 
                   alt={teacher.name} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  className={`w-full h-full object-cover ${isJoseph ? 'object-top brightness-125 contrast-110' : 'object-center'}`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-sonique-dark/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                <div className={`absolute inset-0 bg-gradient-to-t from-sonique-dark/80 via-transparent to-transparent ${isJoseph ? 'opacity-30' : 'opacity-50'}`}></div>
               </div>
               
-              <div className="p-8 text-center relative flex-grow flex flex-col justify-center bg-white transform -translate-y-4 mx-4 rounded-lg shadow-sm border border-gray-100 group-hover:-translate-y-8 transition-transform duration-300">
+              <div className="p-8 text-center relative flex-grow flex flex-col justify-center bg-white transform -translate-y-4 mx-4 rounded-lg shadow-sm border border-gray-100 transition-shadow duration-300">
                 <h3 className="text-2xl font-bold font-header text-sonique-dark mb-2">{teacher.name}</h3>
-                <p className="text-sonique-gold font-bold uppercase text-xs tracking-widest mb-4">{teacher.role}</p>
+                <p className="text-gray-500 font-semibold text-sm mb-4">{teacher.role}</p>
                 <div className="w-8 h-0.5 bg-gray-200 mx-auto mb-4"></div>
-                <p className="text-sm text-gray-500 font-medium italic">{teacher.qualification}</p>
+                <p className="text-sm text-gray-400 font-medium italic">{teacher.qualification}</p>
               </div>
             </div>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>

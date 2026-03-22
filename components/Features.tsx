@@ -1,6 +1,8 @@
 import React from 'react';
 import { FEATURES } from '../constants';
 
+const NUMBERS = ['01', '02', '03', '04'];
+
 const Features: React.FC = () => {
   return (
     <section className="py-24 bg-white">
@@ -9,24 +11,40 @@ const Features: React.FC = () => {
           <h2 className="text-4xl md:text-5xl text-sonique-dark mb-4 uppercase">
             Why <span className="text-sonique-gold">Sonique?</span>
           </h2>
-          <div className="w-24 h-1 bg-sonique-gold mx-auto"></div>
+          <div className="w-24 h-1 bg-sonique-gold mx-auto mb-6"></div>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We believe great teaching is about more than just technique — it's about building a lifelong relationship with music.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 border border-gray-100 rounded-xl overflow-hidden shadow-sm">
           {FEATURES.map((feature, index) => (
-            <div 
-              key={index} 
-              className="group p-8 border border-gray-100 bg-gray-50 hover:bg-sonique-dark hover:text-white transition-all duration-300 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-2 cursor-default"
+            <div
+              key={index}
+              className={`relative flex items-start gap-6 p-10 bg-white hover:bg-gray-50 transition-colors duration-200 overflow-hidden
+                ${index % 2 === 0 ? 'md:border-r border-gray-100' : ''}
+                ${index < 2 ? 'border-b border-gray-100' : ''}
+              `}
             >
-              <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+              {/* Faint number watermark */}
+              <span className="absolute -top-3 right-4 text-8xl font-bold text-gray-100 select-none pointer-events-none leading-none">
+                {NUMBERS[index]}
+              </span>
+
+              {/* Icon */}
+              <div className="flex-shrink-0 w-14 h-14 bg-sonique-dark rounded-lg flex items-center justify-center z-10">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3 uppercase tracking-wide group-hover:text-sonique-gold transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-gray-600 group-hover:text-gray-300 transition-colors">
-                {feature.description}
-              </p>
+
+              {/* Text */}
+              <div className="z-10">
+                <h3 className="text-lg font-bold text-sonique-dark mb-2 uppercase tracking-wide">
+                  {feature.title}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

@@ -23,7 +23,7 @@ export const TEACHERS: Teacher[] = [
     image: teamIsaac
   },
   {
-    name: "Sarah Chen",
+    name: "Joseph Law",
     role: "Senior Piano Teacher",
     qualification: "LRSM Diploma (Piano Performance)",
     image: teamJoseph
@@ -35,7 +35,7 @@ export const TEACHERS: Teacher[] = [
     image: teamCelestine
   },
   {
-    name: "Amelia Tan",
+    name: "David Prinz",
     role: "Classical Guitar Teacher",
     qualification: "ABRSM Grade 8 (Guitar)",
     image: teamDavid
@@ -48,28 +48,33 @@ export const LESSON_TYPES: LessonType[] = [
     title: 'Acoustic Guitar',
     description: 'Master strumming patterns, fingerstyle techniques, and the songs you love in a relaxed setting.',
     image: lessonAcoustic,
-    instrumentValue: 'Acoustic Guitar'
+    instrumentValue: 'Acoustic Guitar',
+    price: 'From $35 / lesson',
+    popular: true,
   },
   {
     id: 'electric-guitar',
     title: 'Electric Guitar',
     description: 'Dive into rock, blues, and pop. Learn solos, power chords, and how to dial in your tone.',
     image: lessonElectric,
-    instrumentValue: 'Electric Guitar'
+    instrumentValue: 'Electric Guitar',
+    price: 'From $35 / lesson',
   },
   {
     id: 'piano',
     title: 'Piano & Keyboard',
     description: 'From classical foundations to modern pop improvisation. Build a strong musical theory base.',
     image: lessonPiano,
-    instrumentValue: 'Piano'
+    instrumentValue: 'Piano',
+    price: 'From $40 / lesson',
   },
   {
     id: 'violin',
     title: 'Violin',
     description: 'Develop proper posture, bowing techniques, and a beautiful tone with our graded curriculum.',
     image: lessonViolin,
-    instrumentValue: 'Violin'
+    instrumentValue: 'Violin',
+    price: 'From $40 / lesson',
   }
 ];
 
