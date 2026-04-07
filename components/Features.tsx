@@ -13,7 +13,7 @@ const Features: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-sonique-gold mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            The right setup at every stage — we guide you in choosing the right instrument so you don’t have to worry about buying the wrong one. Enjoy maintenance services and exclusive discounts.
+            Annual Recital Opportunities · Qualified teachers · Guided progression · The right setup at every stage
           </p>
         </div>
 

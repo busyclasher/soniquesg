@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, UserCheck, Zap, BookOpen } from 'lucide-react';
+import { Award, UserCheck, BookOpen, Wrench } from 'lucide-react';
 import { Feature, Testimonial, LessonType, Teacher } from './types';
 import teamIsaac from './assets/team-isaac.jpg';
 import teamCelestine from './assets/Celestine.jpg';
@@ -19,7 +19,6 @@ export const TEACHERS: Teacher[] = [
     name: 'Isaac Loo',
     role: 'Guitar Teacher',
     credentials: [
-      'Grade 8 Distinction (Rockschool)',
       'Trinity Grade 8 (Rock & Pop Guitar)',
     ],
     location: 'Novena (Central)',
@@ -27,7 +26,7 @@ export const TEACHERS: Teacher[] = [
   },
   {
     name: 'Joseph Law',
-    role: 'Senior Piano Teacher',
+    role: 'Piano Teacher',
     credentials: [
       'LRSM Diploma (Piano Performance)',
       'ABRSM Grade 8 (Piano Performance)',
@@ -44,7 +43,7 @@ export const TEACHERS: Teacher[] = [
   },
   {
     name: 'David Prinz',
-    role: 'Classic Guitar Teacher',
+    role: 'Guitar Teacher',
     credentials: ['ABRSM Grade 8 (Guitar)', 'Diploma in SP Sound & Music'],
     location: 'Serangoon (North-East)',
     image: teamDavid,
@@ -99,10 +98,10 @@ export const FEATURES: Feature[] = [
     icon: <BookOpen className="w-8 h-8 text-[#c3a665]" />,
   },
   {
-    title: 'Continuous Mentorship',
+    title: 'The right setup at every stage',
     description:
-      'Learning does not end after class. Feel free to ask our teachers anything and receive continuous updates!',
-    icon: <Zap className="w-8 h-8 text-[#c3a665]" />,
+      'We guide you in choosing the right instrument so you don’t have to worry about buying the wrong one. Enjoy maintenance services and exclusive discounts',
+    icon: <Wrench className="w-8 h-8 text-[#c3a665]" />,
   },
 ];
 
@@ -124,11 +123,6 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Parent of Bosco (15yo)',
     quote:
       'Coach Isaac is a really great guitar teacher! Extremely patient and versatile to learning any song on request, and is able to understand and teach many different ways to play the guitar faster and better, even for a beginner! That’s the feedback that I get from my son, and he is enjoying every single lesson that he went for the past few months',
-  },
-  {
-    name: 'Parent of Nandika',
-    role: '',
-    quote: '[To be inserted]',
   },
   {
     name: 'Dorcas Wang',

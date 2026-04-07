@@ -36,25 +36,23 @@ const Philosophy: React.FC = () => {
                 experience never truly connected with them.
               </p>
               <p>
-                Our founder, <strong className="text-white">Isaac Loo</strong>, found himself dreading learning the
-                guitar during his younger days, complaining that it was “just noise”. However, that dread turned into a
-                passion for the guitar ever since discovering metal music.
+                This often happens when learning feels irrelevant to what the learner actually enjoys.
               </p>
               <p>
-                It was through this passion that he reopened himself to appreciate music holistically. What began as a
-                desire to play the songs he liked led him to build confidence, win music awards, and be accepted into
-                his <strong className="text-white">Direct-School Admissions</strong> program.
+                Our founder, <strong className="text-white">Isaac</strong>, experienced this firsthand. Losing interest
+                early on, before rediscovering music through the songs he wanted to play. What began as a desire to
+                play the songs he enjoyed gradually grew into a deeper appreciation for music, building his confidence
+                and shaping his growth beyond the instrument.
               </p>
               <p>
-                It was through this experience that he realised fun and growth are not mutually exclusive. Regardless of
-                age, we learn best when we see intrinsic meaning in our learning — leading to motivation and natural
-                progress.
+                At Sonique, we carry this belief forward. When learners connect with what they play, they stay engaged,
+                and meaningful progress follows. Over time, this not only develops their musical ability, but
+                character as well.
               </p>
               <div className="bg-white/5 p-6 rounded-r-lg border-l-2 border-sonique-gold">
                 <p className="font-medium text-white">
-                  At Sonique, we carry this belief forward. When learners connect with what they play, they stay
-                  engaged, and meaningful progress follows. Over time, this not only develops their musical ability, but
-                  character as well.
+                  Be it classical or contemporary, it is thus the philosophy of Sonique Studio to empower learners to
+                  grow while having fun learning music.
                 </p>
               </div>
             </div>

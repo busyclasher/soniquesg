@@ -31,6 +31,14 @@ const Footer: React.FC = () => {
               A network of home-based music studios empowering students of all ages to learn music in a fun and
               accessible way across Singapore.
             </p>
+            <a
+              href="https://www.carousell.sg/u/soniquestudio.sg/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex text-sm text-gray-300 hover:text-sonique-gold transition-colors"
+            >
+              Carousell: soniquestudio.sg
+            </a>
             <div className="flex gap-4 pt-2 items-center">
               <a
                 href="https://www.instagram.com/soniquestudio.sg/"
