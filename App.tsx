@@ -9,6 +9,7 @@ import Team from './components/Team';
 import Footer from './components/Footer';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
+import { waMeLink, WHATSAPP_INQUIRY_MESSAGE, WHATSAPP_NUMBERS } from './whatsapp';
 
 interface DropdownItem {
   label: string;
@@ -29,7 +30,7 @@ const App: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const dropdownTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const WA_URL = 'https://wa.me/6591234567?text=Hi%2C%20I%27m%20interested%20in%20a%20free%20trial%20lesson!';
+  const WA_URL = waMeLink(WHATSAPP_NUMBERS.primary, WHATSAPP_INQUIRY_MESSAGE);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -61,7 +62,7 @@ const App: React.FC = () => {
       const y = window.scrollY;
       setShowScrollTop(y > 500);
 
-      const sections = ['home', 'features', 'lessons', 'philosophy', 'team', 'testimonials', 'contact'];
+      const sections = ['home', 'features', 'lessons', 'team', 'philosophy', 'testimonials', 'contact'];
       const scrollPosition = y + window.innerHeight / 3;
 
       for (const section of sections) {
@@ -113,18 +114,17 @@ const App: React.FC = () => {
       id: 'lessons',
       label: 'Lessons',
       dropdown: [
-        { label: 'Acoustic Guitar', sectionId: 'lessons' },
-        { label: 'Electric Guitar', sectionId: 'lessons' },
-        { label: 'Piano & Keyboard', sectionId: 'lessons' },
+        { label: 'Guitar', sectionId: 'lessons' },
         { label: 'Violin', sectionId: 'lessons' },
+        { label: 'Piano', sectionId: 'lessons' },
       ],
     },
     {
       id: 'about',
       label: 'About',
       dropdown: [
-        { label: 'Our Philosophy', sectionId: 'philosophy' },
         { label: 'Meet the Team', sectionId: 'team' },
+        { label: 'Our Philosophy', sectionId: 'philosophy' },
       ],
     },
     { id: 'testimonials', label: 'Testimonials' },
@@ -283,11 +283,11 @@ const App: React.FC = () => {
         <div id="lessons" className="reveal">
           <Lessons />
         </div>
-        <div id="philosophy" className="reveal">
-          <Philosophy />
-        </div>
         <div id="team" className="reveal">
           <Team />
+        </div>
+        <div id="philosophy" className="reveal">
+          <Philosophy />
         </div>
         <div id="testimonials" className="reveal">
           <Testimonials />
@@ -314,7 +314,7 @@ const App: React.FC = () => {
 
       {/* WhatsApp Floating Button */}
       <a 
-        href="https://wa.me/6591234567" 
+        href={WA_URL} 
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.3)] hover:scale-110 hover:shadow-[0_6px_16px_rgba(37,211,102,0.4)] transition-all duration-300 group flex items-center justify-center"

@@ -1,12 +1,11 @@
 import React from 'react';
-import { Award, UserCheck, Star, Zap } from 'lucide-react';
+import { Award, UserCheck, Zap, BookOpen } from 'lucide-react';
 import { Feature, Testimonial, LessonType, Teacher } from './types';
 import teamIsaac from './assets/team-isaac.jpg';
 import teamCelestine from './assets/Celestine.jpg';
 import teamDavid from './assets/david.jpg';
 import teamJoseph from './assets/joseph.jpg';
-import lessonAcoustic from './assets/jamming-sesh.jpg';
-import lessonElectric from './assets/guitar.jpg';
+import lessonGuitar from './assets/guitar.jpg';
 import lessonPiano from './assets/piano-lesson.jpg';
 import lessonViolin from './assets/playing-violin.jpg';
 
@@ -17,107 +16,124 @@ export const SONIQUE_COLORS = {
 
 export const TEACHERS: Teacher[] = [
   {
-    name: "Isaac Loo",
-    role: "Director & Guitar Teacher",
-    qualification: "Grade 8 Distinction (Rockschool)",
-    image: teamIsaac
+    name: 'Isaac Loo',
+    role: 'Guitar Teacher',
+    credentials: [
+      'Grade 8 Distinction (Rockschool)',
+      'Trinity Grade 8 (Rock & Pop Guitar)',
+    ],
+    location: 'Novena (Central)',
+    image: teamIsaac,
   },
   {
-    name: "Joseph Law",
-    role: "Senior Piano Teacher",
-    qualification: "LRSM Diploma (Piano Performance)",
-    image: teamJoseph
+    name: 'Joseph Law',
+    role: 'Senior Piano Teacher',
+    credentials: [
+      'LRSM Diploma (Piano Performance)',
+      'ABRSM Grade 8 (Piano Performance)',
+    ],
+    location: 'Farrer Park (Central)',
+    image: teamJoseph,
   },
   {
-    name: "Celestine",
-    role: "Violin Teacher",
-    qualification: "Bachelor of Music (Violin)",
-    image: teamCelestine
+    name: 'Celestine Sheum',
+    role: 'Violin Teacher',
+    credentials: ['Bachelor of Music (Violin)', 'Trinity Diploma (ATCL Violin)'],
+    location: 'Katong (East)',
+    image: teamCelestine,
   },
   {
-    name: "David Prinz",
-    role: "Classical Guitar Teacher",
-    qualification: "ABRSM Grade 8 (Guitar)",
-    image: teamDavid
-  }
+    name: 'David Prinz',
+    role: 'Classic Guitar Teacher',
+    credentials: ['ABRSM Grade 8 (Guitar)', 'Diploma in SP Sound & Music'],
+    location: 'Serangoon (North-East)',
+    image: teamDavid,
+  },
 ];
 
 export const LESSON_TYPES: LessonType[] = [
   {
-    id: 'acoustic-guitar',
-    title: 'Acoustic Guitar',
-    description: 'Master strumming patterns, fingerstyle techniques, and the songs you love in a relaxed setting.',
-    image: lessonAcoustic,
-    instrumentValue: 'Acoustic Guitar',
-    price: 'From $35 / lesson',
-    popular: true,
-  },
-  {
-    id: 'electric-guitar',
-    title: 'Electric Guitar',
-    description: 'Dive into rock, blues, and pop. Learn solos, power chords, and how to dial in your tone.',
-    image: lessonElectric,
-    instrumentValue: 'Electric Guitar',
-    price: 'From $35 / lesson',
-  },
-  {
-    id: 'piano',
-    title: 'Piano & Keyboard',
-    description: 'From classical foundations to modern pop improvisation. Build a strong musical theory base.',
-    image: lessonPiano,
-    instrumentValue: 'Piano',
-    price: 'From $40 / lesson',
+    id: 'guitar',
+    title: 'Guitar',
+    description:
+      'Play songs you already enjoy, while building the control and accuracy to perform them on both acoustic and electric guitar.',
+    image: lessonGuitar,
+    instrumentValue: 'Guitar',
   },
   {
     id: 'violin',
     title: 'Violin',
-    description: 'Develop proper posture, bowing techniques, and a beautiful tone with our graded curriculum.',
+    description:
+      'Learn proper posture, bowing, and tone through structured lessons, laying a strong foundation for steady and expressive playing.',
     image: lessonViolin,
     instrumentValue: 'Violin',
-    price: 'From $40 / lesson',
-  }
+  },
+  {
+    id: 'piano',
+    title: 'Piano',
+    description:
+      'Explore contemporary styles like pop and worship. Gain the ability to play, accompany, and improvise on both piano and keyboard.',
+    image: lessonPiano,
+    instrumentValue: 'Piano',
+  },
 ];
 
 export const FEATURES: Feature[] = [
   {
-    title: "Annual Recital Opportunities",
-    description: "Hone musicianship and gain confidence on stage through our organized performances.",
-    icon: <Award className="w-8 h-8 text-[#c3a665]" />
+    title: 'Annual Recital Opportunities',
+    tagline: 'Step onto the stage',
+    description:
+      'Develop musicianship and confidence through each performance milestone',
+    icon: <Award className="w-8 h-8 text-[#c3a665]" />,
   },
   {
-    title: "Qualified Teachers",
-    description: "All our teachers are minimally certified at the Grade 8 or tertiary level for structured, expert guidance.",
-    icon: <UserCheck className="w-8 h-8 text-[#c3a665]" />
+    title: 'Qualified Teachers',
+    description:
+      'All our teachers are minimally certified at the Grade 8 or tertiary level for structured, expert guidance.',
+    icon: <UserCheck className="w-8 h-8 text-[#c3a665]" />,
   },
   {
-    title: "Continuous Mentorship",
-    description: "Learning does not end after class. Feel free to ask our teachers anything and receive continuous updates!",
-    icon: <Zap className="w-8 h-8 text-[#c3a665]" />
+    title: 'Guided Progression',
+    description:
+      'Learn from teachers who provide clear direction and adapt each lesson to the student’s pace and goals, with regular progress updates',
+    icon: <BookOpen className="w-8 h-8 text-[#c3a665]" />,
   },
   {
-    title: "Exclusive Discounts",
-    description: "Enjoy special rates when choosing our services and musical products.",
-    icon: <Star className="w-8 h-8 text-[#c3a665]" />
-  }
+    title: 'Continuous Mentorship',
+    description:
+      'Learning does not end after class. Feel free to ask our teachers anything and receive continuous updates!',
+    icon: <Zap className="w-8 h-8 text-[#c3a665]" />,
+  },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Sarah Tan",
-    role: "Parent of Caleb (9yo)",
-    quote: "We struggled to find a teacher who could keep Caleb interested. Sonique's approach to mixing pop songs with proper technique changed everything. He actually practices on his own now!",
-    image: teamCelestine
+    name: 'Dushan Silva',
+    role: 'Parent of Rachel (6yo)',
+    quote:
+      'Great to see teacher have all the necessary qualities and skills to make my child feel excited to go back to guitar lessons and she able to learn fast',
   },
   {
-    name: "Marcus Lim",
-    role: "Guitar Student (16yo)",
-    quote: "I wanted to learn electric guitar for my band. Isaac helped me understand the theory behind the solos I liked. The jam sessions are super fun.",
-    image: teamDavid
+    name: 'Bee Huay',
+    role: 'Parent of Eclaire (13yo)',
+    quote:
+      'Isaac is a patient and talented teacher and his place is conducive to learning, with a suite of different guitars you can experiment. My girl benefits a lot from his guidance',
   },
   {
-    name: "Priya Kumar",
-    role: "Adult Piano Student",
-    quote: "I was hesitant to start learning music in my 30s. The team at Sonique made it so accessible and stress-free. It's the highlight of my week.",
-    image: teamJoseph
-  }
+    name: 'Adeline Chang',
+    role: 'Parent of Bosco (15yo)',
+    quote:
+      'Coach Isaac is a really great guitar teacher! Extremely patient and versatile to learning any song on request, and is able to understand and teach many different ways to play the guitar faster and better, even for a beginner! That’s the feedback that I get from my son, and he is enjoying every single lesson that he went for the past few months',
+  },
+  {
+    name: 'Parent of Nandika',
+    role: '',
+    quote: '[To be inserted]',
+  },
+  {
+    name: 'Dorcas Wang',
+    role: 'Adult Piano Student (24yo)',
+    quote:
+      'Joseph is a highly patient and encouraging keyboard and piano teacher who tailors each lesson to suit each individual\'s ability and pace of learning. His classes are not overwhelming. You leave learning something new each class. He is also very encouraging and focuses a lot on helping students develop their own musical style rather than following a standardised approach.',
+  },
 ];

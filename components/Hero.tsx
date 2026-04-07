@@ -4,14 +4,14 @@ import heroOne from '../assets/guitar.jpg';
 import heroTwo from '../assets/piano-lesson.jpg';
 import heroThree from '../assets/violin.jpg';
 import heroFour from '../assets/jamming-sesh.jpg';
+import { waMeLink, WHATSAPP_INQUIRY_MESSAGE, WHATSAPP_NUMBERS } from '../whatsapp';
 
 const HERO_IMAGES = [heroOne, heroTwo, heroThree, heroFour];
 const SLIDE_DURATION = 6000;
-const WA_URL = 'https://wa.me/98228518?text=Hi%2C%20I%27m%20interested%20in%20a%20free%20trial%20lesson!';
+const WA_URL = waMeLink(WHATSAPP_NUMBERS.primary, WHATSAPP_INQUIRY_MESSAGE);
 
 const Hero: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  // Bump this key every time the slide changes to restart the CSS progress animation
   const [progressKey, setProgressKey] = useState(0);
 
   useEffect(() => {
@@ -34,7 +34,6 @@ const Hero: React.FC = () => {
 
   return (
     <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-sonique-dark text-white">
-      {/* Background Photos with Overlay */}
       <div className="absolute inset-0 z-0">
         {HERO_IMAGES.map((src, index) => (
           <img
@@ -56,9 +55,9 @@ const Hero: React.FC = () => {
         <h1 className="text-5xl md:text-7xl lg:text-8xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-sonique-gold to-yellow-200 tracking-wide uppercase opacity-0 animate-fade-in-up">
           Sonique Studio
         </h1>
-        
+
         <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed opacity-0 animate-fade-in-up delay-500">
-          We are a network of home-based studios empowering you or your child to learn music in a <span className="text-sonique-gold font-semibold">fun</span> and <span className="text-sonique-gold font-semibold">accessible</span> manner.
+          Where young learners play what they love and grow with confidence
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center opacity-0 animate-fade-in-up delay-700">
@@ -69,7 +68,7 @@ const Hero: React.FC = () => {
             className="group relative px-8 py-4 bg-sonique-gold text-sonique-dark font-bold text-lg rounded-none uppercase tracking-widest hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(195,166,101,0.3)] flex items-center gap-2"
           >
             <MessageCircle className="w-5 h-5" />
-            Book a Free Trial
+            Book a Trial
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
 
@@ -83,7 +82,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Progress Bar Slide Indicators */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3">
         {HERO_IMAGES.map((_, index) => (
           <button
@@ -102,12 +100,10 @@ const Hero: React.FC = () => {
           </button>
         ))}
       </div>
-      
-      {/* Decorative Bottom Fade */}
+
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-sonique-dark to-transparent"></div>
     </div>
   );
 };
 
 export default Hero;
-/*  */

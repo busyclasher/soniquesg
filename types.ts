@@ -1,16 +1,10 @@
 import React from 'react';
 
-export interface Teacher {
-  name: string;
-  role: string;
-  qualification: string;
-  image: string;
-}
-
 export interface Feature {
   title: string;
   description: string;
   icon: React.ReactNode;
+  tagline?: string;
 }
 
 export interface LessonType {
@@ -19,7 +13,6 @@ export interface LessonType {
   description: string;
   image: string;
   instrumentValue: string; // value to pass to planner
-  price: string;
   popular?: boolean;
 }
 
@@ -46,5 +39,12 @@ export interface Testimonial {
   name: string;
   role: string;
   quote: string;
+}
+
+export interface Teacher {
+  name: string;
+  role: string;
+  credentials: string[];
+  location: string;
   image: string;
 }

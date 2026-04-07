@@ -52,7 +52,7 @@ const AIPlannerModal: React.FC<AIPlannerModalProps> = ({ isOpen, onClose, initia
   const handleWhatsAppRedirect = () => {
     const message = `Hi Sonique! I'm interested in the "${plan?.title}" for my child (Age: ${formData.age}, Instrument: ${formData.instrument}).\n\nGoal: ${formData.goal}`;
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/6591234567?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/6598228518?text=${encodedMessage}`, '_blank');
   };
 
   return (
@@ -103,10 +103,9 @@ const AIPlannerModal: React.FC<AIPlannerModalProps> = ({ isOpen, onClose, initia
                     value={formData.instrument}
                     onChange={(e) => setFormData({...formData, instrument: e.target.value})}
                     >
-                    <option value="Acoustic Guitar">Acoustic Guitar</option>
-                    <option value="Electric Guitar">Electric Guitar</option>
-                    <option value="Piano">Piano / Keyboard</option>
+                    <option value="Guitar">Guitar</option>
                     <option value="Violin">Violin</option>
+                    <option value="Piano">Piano</option>
                     </select>
                 </div>
               </div>
