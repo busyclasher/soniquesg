@@ -20,7 +20,7 @@ const Philosophy: React.FC = () => {
           <img
             src={philosophyPhoto}
             alt="Piano mentoring session"
-            className="rounded-lg shadow-2xl opacity-80 grayscale hover:grayscale-0 transition-all duration-500"
+            className="rounded-lg shadow-2xl w-full"
           />
         </div>
 

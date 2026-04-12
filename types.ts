@@ -1,7 +1,8 @@
 import React from 'react';
 
 export interface Feature {
-  title: string;
+  /** When omitted, only description is shown (e.g. lead sentence is the headline in copy). */
+  title?: string;
   description: string;
   icon: React.ReactNode;
   tagline?: string;

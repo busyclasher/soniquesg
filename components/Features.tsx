@@ -13,7 +13,7 @@ const Features: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-sonique-gold mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Annual Recital Opportunities · Qualified teachers · Guided progression · The right setup at every stage
+            Annual Recital Opportunities · Qualified teachers · Guided progression
           </p>
         </div>
 
@@ -38,15 +38,15 @@ const Features: React.FC = () => {
 
               {/* Text */}
               <div className="z-10">
-                <h3 className="text-lg font-bold text-sonique-dark mb-1 uppercase tracking-wide">
-                  {feature.title}
-                </h3>
-                {feature.tagline && (
+                {feature.title ? (
+                  <h3 className="text-lg font-bold text-sonique-dark mb-1 uppercase tracking-wide">
+                    {feature.title}
+                  </h3>
+                ) : null}
+                {feature.tagline ? (
                   <p className="text-sm font-semibold text-sonique-gold mb-2">{feature.tagline}</p>
-                )}
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
+                ) : null}
+                <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             </div>
           ))}

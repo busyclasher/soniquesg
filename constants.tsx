@@ -18,9 +18,7 @@ export const TEACHERS: Teacher[] = [
   {
     name: 'Isaac Loo',
     role: 'Guitar Teacher',
-    credentials: [
-      'Trinity Grade 8 (Rock & Pop Guitar)',
-    ],
+    credentials: ['Trinity Grade 8 (Rock & Pop) Guitar'],
     location: 'Novena (Central)',
     image: teamIsaac,
   },
@@ -100,7 +98,7 @@ export const FEATURES: Feature[] = [
   {
     title: 'The right setup at every stage',
     description:
-      'We guide you in choosing the right instrument so you don’t have to worry about buying the wrong one. Enjoy maintenance services and exclusive discounts',
+      'We guide you in choosing the right instrument so you don’t have to worry about buying the wrong one. Enjoy maintenance services and exclusive discounts.',
     icon: <Wrench className="w-8 h-8 text-[#c3a665]" />,
   },
 ];
