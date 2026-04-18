@@ -9,11 +9,7 @@ const Philosophy: React.FC = () => {
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div>
           <h2 className="text-4xl md:text-5xl text-sonique-gold mb-6 uppercase">Our Mission</h2>
-          <p className="text-2xl font-light leading-snug mb-4 border-l-4 border-sonique-gold pl-6">
-            To make learning music <span className="font-bold text-white">fun</span> and{' '}
-            <span className="font-bold text-white">accessible</span> in every corner of Singapore.
-          </p>
-          <p className="text-xl font-light text-gray-200 mb-10 pl-6 md:pl-10 border-l-4 border-white/20">
+          <p className="text-2xl font-light leading-snug mb-10 border-l-4 border-sonique-gold pl-6">
             Grow young learners into confident musicians
           </p>
 

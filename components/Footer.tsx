@@ -3,7 +3,6 @@ import { Instagram, MessageCircle, Mail, MapPin, Phone } from 'lucide-react';
 import logo from '../assets/sonique-logo.png';
 import { waMeLink, WHATSAPP_INQUIRY_MESSAGE, WHATSAPP_NUMBERS } from '../whatsapp';
 
-const waAlt = waMeLink(WHATSAPP_NUMBERS.alternate, WHATSAPP_INQUIRY_MESSAGE);
 const waPrimary = waMeLink(WHATSAPP_NUMBERS.primary, WHATSAPP_INQUIRY_MESSAGE);
 
 const Footer: React.FC = () => {
@@ -94,49 +93,6 @@ const Footer: React.FC = () => {
 
           <div className="space-y-10">
             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-6">Contact Us</h4>
-
-            <div className="space-y-4 pb-8 border-b border-gray-800">
-              <div className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" />
-                <div>
-                  <a
-                    href={waAlt}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-gray-400 hover:text-sonique-gold transition-colors"
-                  >
-                    +65 9123 4567
-                  </a>
-                  <p className="text-xs text-gray-600 mt-0.5">Mon – Sun, 9am – 9pm</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" />
-                <a
-                  href="mailto:isaac2lookj@gmail.com"
-                  className="text-sm text-gray-400 hover:text-sonique-gold transition-colors break-all"
-                >
-                  isaac2lookj@gmail.com
-                </a>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" />
-                <p className="text-sm text-gray-400">
-                  Home-Based Studios Islandwide
-                  <br />
-                  <span className="text-xs text-gray-600">Tampines · Jurong · Bishan</span>
-                </p>
-              </div>
-              <a
-                href={waAlt}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-sonique-gold text-sonique-dark font-bold text-xs uppercase tracking-widest hover:bg-white transition-colors"
-              >
-                <MessageCircle className="w-4 h-4" />
-                Book a Free Trial
-              </a>
-            </div>
 
             <div className="space-y-4">
               <div className="flex items-start gap-3">
