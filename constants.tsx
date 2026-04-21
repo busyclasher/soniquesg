@@ -25,24 +25,21 @@ export const TEACHERS: Teacher[] = [
   {
     name: 'Joseph Law',
     role: 'Piano Teacher',
-    credentials: [
-      'LRSM Diploma (Piano Performance)',
-      'ABRSM Grade 8 (Piano Performance)',
-    ],
+    credentials: ['ABRSM Grade 8 (Piano Performance)'],
     location: 'Farrer Park (Central)',
     image: teamJoseph,
   },
   {
     name: 'Celestine Sheum',
     role: 'Violin Teacher',
-    credentials: ['Bachelor of Music (Violin)', 'Trinity Diploma (ATCL Violin)'],
+    credentials: ['Trinity Diploma (ATCL Violin)'],
     location: 'Katong (East)',
     image: teamCelestine,
   },
   {
     name: 'David Prinz',
     role: 'Guitar Teacher',
-    credentials: ['ABRSM Grade 8 (Guitar)', 'Diploma in SP Sound & Music'],
+    credentials: ['Diploma in SP Sound & Music'],
     location: 'Serangoon (North-East)',
     image: teamDavid,
   },

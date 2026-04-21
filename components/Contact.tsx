@@ -67,10 +67,10 @@ const Contact: React.FC = () => {
               <div>
                 <h4 className="font-bold text-sonique-dark mb-1">Email</h4>
                 <a
-                  href="mailto:isaac2lookj@gmail.com"
+                  href="mailto:soniquestudiosg@gmail.com"
                   className="text-gray-600 hover:text-sonique-gold transition-colors break-all"
                 >
-                  isaac2lookj@gmail.com
+                  soniquestudiosg@gmail.com
                 </a>
                 <p className="text-xs text-gray-400 mt-1">We reply within 24 hours</p>
               </div>

@@ -47,8 +47,9 @@ const Philosophy: React.FC = () => {
               </p>
               <div className="bg-white/5 p-6 rounded-r-lg border-l-2 border-sonique-gold">
                 <p className="font-medium text-white">
-                  Be it classical or contemporary, it is thus the philosophy of Sonique Studio to empower learners to
-                  grow while having fun learning music.
+                  At Sonique, we carry this belief forward. When learners connect with what they play, they stay
+                  engaged, and meaningful progress follows. Over time, this not only develops their musical ability,
+                  but character as well.
                 </p>
               </div>
             </div>
