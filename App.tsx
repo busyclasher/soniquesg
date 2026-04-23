@@ -205,7 +205,7 @@ const App: React.FC = () => {
                   rel="noopener noreferrer"
                   className="text-xs bg-sonique-gold text-sonique-dark border border-sonique-gold px-6 py-2.5 hover:bg-white hover:border-white transition-all uppercase font-bold tracking-wider shadow-[0_0_15px_rgba(195,166,101,0.3)]"
                 >
-                  Free Trial
+                  Trial
                 </a>
               </div>
 
