@@ -74,17 +74,10 @@ export const LESSON_TYPES: LessonType[] = [
 
 export const FEATURES: Feature[] = [
   {
-    title: 'Annual Recital Opportunities',
-    tagline: 'Step onto the stage',
+    title: 'Step onto the stage',
     description:
       'Develop musicianship and confidence through each performance milestone',
     icon: <Award className="w-8 h-8 text-[#c3a665]" />,
-  },
-  {
-    title: 'Qualified Teachers',
-    description:
-      'All our teachers are minimally certified at the Grade 8 or tertiary level for structured, expert guidance.',
-    icon: <UserCheck className="w-8 h-8 text-[#c3a665]" />,
   },
   {
     title: 'Guided Progression',

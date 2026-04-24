@@ -13,7 +13,7 @@ const Features: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-sonique-gold mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Annual Recital Opportunities · Qualified teachers · Guided progression
+            Here's how we develop confident musicians
           </p>
         </div>
 

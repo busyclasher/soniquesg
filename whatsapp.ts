@@ -19,7 +19,7 @@ Preferred location:
 Anything else we should know?:`;
 
 export const WHATSAPP_NUMBERS = {
-  primary: '6598228518',
+  primary: '6587759250',
   alternate: '6591234567',
 } as const;
 

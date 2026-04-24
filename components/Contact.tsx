@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-sonique-gold transition-colors"
                 >
-                  +65 9822 8518
+                  +65 8775 9250
                 </a>
               </div>
             </div>

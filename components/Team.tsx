@@ -11,10 +11,6 @@ const Team: React.FC = () => {
             Meet The <span className="text-sonique-gold">Team</span>
           </h2>
           <div className="w-24 h-1 bg-sonique-gold mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-3xl mx-auto text-lg mb-6">
-            Our network of qualified teachers spans across Singapore. From Trinity Rock & Pop to classical paths, we
-            match you with the perfect mentor.
-          </p>
           <p className="text-gray-600 max-w-3xl mx-auto text-base leading-relaxed">
             Our teachers run their own dedicated home studios to create a safe and conducive learning environment. They
             guide learners with patience and clarity so that learning stays engaging and at a comfortable pace.

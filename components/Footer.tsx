@@ -26,10 +26,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="space-y-6">
             <img src={logo} alt="Sonique Studio SG" className="h-16 w-16 object-contain" />
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              A network of home-based music studios empowering students of all ages to learn music in a fun and
-              accessible way across Singapore.
-            </p>
+
             <a
               href="https://www.carousell.sg/u/soniquestudio.sg/"
               target="_blank"
@@ -103,7 +100,7 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-sonique-gold transition-colors"
                 >
-                  +65 9822 8518
+                  +65 8775 9250
                 </a>
               </div>
               <div className="flex items-start gap-3">
