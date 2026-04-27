@@ -40,11 +40,6 @@ const Philosophy: React.FC = () => {
                 play the songs he enjoyed gradually grew into a deeper appreciation for music, building his confidence
                 and shaping his growth beyond the instrument.
               </p>
-              <p>
-                At Sonique, we carry this belief forward. When learners connect with what they play, they stay engaged,
-                and meaningful progress follows. Over time, this not only develops their musical ability, but
-                character as well.
-              </p>
               <div className="bg-white/5 p-6 rounded-r-lg border-l-2 border-sonique-gold">
                 <p className="font-medium text-white">
                   At Sonique, we carry this belief forward. When learners connect with what they play, they stay
