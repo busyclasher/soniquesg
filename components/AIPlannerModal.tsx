@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, Loader2, Sparkles, CheckCircle, BookOpen, Music, Target, ArrowRight } from 'lucide-react';
 import { generateLessonPlan, isGeminiConfigured } from '../services/geminiService';
 import { GeneratedPlan, LessonPlanRequest } from '../types';
+import { trackWhatsAppConversion } from '../tracking';
 
 interface AIPlannerModalProps {
   isOpen: boolean;
@@ -52,6 +53,7 @@ const AIPlannerModal: React.FC<AIPlannerModalProps> = ({ isOpen, onClose, initia
   const handleWhatsAppRedirect = () => {
     const message = `Hi Sonique! I'm interested in the "${plan?.title}" for my child (Age: ${formData.age}, Instrument: ${formData.instrument}).\n\nGoal: ${formData.goal}`;
     const encodedMessage = encodeURIComponent(message);
+    trackWhatsAppConversion();
     window.open(`https://wa.me/6587759250?text=${encodedMessage}`, '_blank');
   };
 

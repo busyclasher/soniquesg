@@ -2,6 +2,7 @@ import React from 'react';
 import { Sparkles, ArrowRight } from 'lucide-react';
 import { LESSON_TYPES } from '../constants';
 import { waMeLink, WHATSAPP_INQUIRY_MESSAGE, WHATSAPP_NUMBERS } from '../whatsapp';
+import { trackWhatsAppConversion } from '../tracking';
 
 const trialHref = waMeLink(WHATSAPP_NUMBERS.primary, WHATSAPP_INQUIRY_MESSAGE);
 
@@ -28,6 +29,7 @@ const Lessons: React.FC = () => {
               href={trialHref}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackWhatsAppConversion}
               className="inline-flex items-center gap-2 px-8 py-4 bg-sonique-gold text-sonique-dark font-bold uppercase text-xs tracking-widest hover:bg-sonique-dark hover:text-white transition-all duration-300 shadow-lg"
             >
               Book a Trial

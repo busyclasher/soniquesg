@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, MessageCircle, ArrowRight } from 'lucide-react';
 import { waMeLink, WHATSAPP_INQUIRY_MESSAGE, WHATSAPP_NUMBERS } from '../whatsapp';
+import { trackWhatsAppConversion } from '../tracking';
 
 const WA_PRIMARY = waMeLink(WHATSAPP_NUMBERS.primary, WHATSAPP_INQUIRY_MESSAGE);
 
@@ -34,6 +35,7 @@ const Contact: React.FC = () => {
               href={WA_PRIMARY}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackWhatsAppConversion}
               className="mt-10 w-full py-4 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold uppercase text-sm tracking-widest flex items-center justify-center gap-3 transition-colors duration-200 rounded-lg"
             >
               <MessageCircle className="w-5 h-5" />
@@ -53,6 +55,7 @@ const Contact: React.FC = () => {
                   href={WA_PRIMARY}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={trackWhatsAppConversion}
                   className="text-gray-600 hover:text-sonique-gold transition-colors"
                 >
                   +65 8775 9250

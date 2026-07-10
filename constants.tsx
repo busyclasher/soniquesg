@@ -3,7 +3,7 @@ import { Award, UserCheck, BookOpen, Wrench } from 'lucide-react';
 import { Feature, Testimonial, LessonType, Teacher } from './types';
 import teamIsaac from './assets/team-isaac.jpg';
 import teamCelestine from './assets/Celestine.jpg';
-import teamDavid from './assets/david.jpg';
+import teamMarcus from './assets/marcus.jpg';
 import teamJoseph from './assets/joseph.jpg';
 import lessonGuitar from './assets/guitar.jpg';
 import lessonPiano from './assets/piano-lesson.jpg';
@@ -37,11 +37,11 @@ export const TEACHERS: Teacher[] = [
     image: teamCelestine,
   },
   {
-    name: 'David Prinz',
+    name: 'Marcus Wong',
     role: 'Guitar Teacher',
-    credentials: ['Diploma in SP Sound & Music'],
-    location: 'Serangoon (North-East)',
-    image: teamDavid,
+    credentials: ['Diploma in Music and Audio Technology'],
+    location: 'Punggol (North-East)',
+    image: teamMarcus,
   },
 ];
 

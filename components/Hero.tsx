@@ -5,6 +5,7 @@ import heroTwo from '../assets/piano-lesson.jpg';
 import heroThree from '../assets/violin.jpg';
 import heroFour from '../assets/jamming-sesh.jpg';
 import { waMeLink, WHATSAPP_INQUIRY_MESSAGE, WHATSAPP_NUMBERS } from '../whatsapp';
+import { trackWhatsAppConversion } from '../tracking';
 
 const HERO_IMAGES = [heroOne, heroTwo, heroThree, heroFour];
 const SLIDE_DURATION = 6000;
@@ -65,6 +66,7 @@ const Hero: React.FC = () => {
             href={WA_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackWhatsAppConversion}
             className="group relative px-8 py-4 bg-sonique-gold text-sonique-dark font-bold text-lg rounded-none uppercase tracking-widest hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(195,166,101,0.3)] flex items-center gap-2"
           >
             <MessageCircle className="w-5 h-5" />

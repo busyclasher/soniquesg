@@ -2,6 +2,7 @@ import React from 'react';
 import { Instagram, MessageCircle, Mail, MapPin, Phone } from 'lucide-react';
 import logo from '../assets/sonique-logo.png';
 import { waMeLink, WHATSAPP_INQUIRY_MESSAGE, WHATSAPP_NUMBERS } from '../whatsapp';
+import { trackWhatsAppConversion } from '../tracking';
 
 const waPrimary = waMeLink(WHATSAPP_NUMBERS.primary, WHATSAPP_INQUIRY_MESSAGE);
 
@@ -65,6 +66,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
+                onClick={trackWhatsAppConversion}
                 className="w-10 h-10 flex items-center justify-center border border-gray-700 text-gray-400 hover:border-[#25D366] hover:text-[#25D366] transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
@@ -98,6 +100,7 @@ const Footer: React.FC = () => {
                   href={waPrimary}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={trackWhatsAppConversion}
                   className="text-sm text-gray-400 hover:text-sonique-gold transition-colors"
                 >
                   +65 8775 9250
@@ -124,6 +127,7 @@ const Footer: React.FC = () => {
                 href={waPrimary}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackWhatsAppConversion}
                 className="inline-flex items-center gap-2 px-6 py-3 border border-sonique-gold text-sonique-gold font-bold text-xs uppercase tracking-widest hover:bg-sonique-gold hover:text-sonique-dark transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
