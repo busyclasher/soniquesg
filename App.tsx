@@ -9,8 +9,9 @@ import Team from './components/Team';
 import Footer from './components/Footer';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
+import WhatsAppRedirectModal from './components/WhatsAppRedirectModal';
 import { waMeLink, WHATSAPP_INQUIRY_MESSAGE, WHATSAPP_NUMBERS } from './whatsapp';
-import { trackWhatsAppConversion } from './tracking';
+import { handleWhatsAppClick } from './tracking';
 
 interface DropdownItem {
   label: string;
@@ -204,7 +205,7 @@ const App: React.FC = () => {
                   href={WA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={trackWhatsAppConversion}
+                  onClick={(event) => handleWhatsAppClick(event, WA_URL)}
                   className="text-xs bg-sonique-gold text-sonique-dark border border-sonique-gold px-6 py-2.5 hover:bg-white hover:border-white transition-all uppercase font-bold tracking-wider shadow-[0_0_15px_rgba(195,166,101,0.3)]"
                 >
                   Trial
@@ -217,7 +218,7 @@ const App: React.FC = () => {
                   href={WA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={trackWhatsAppConversion}
+                  onClick={(event) => handleWhatsAppClick(event, WA_URL)}
                   className="text-xs bg-sonique-gold text-sonique-dark border border-sonique-gold px-3 py-2 font-bold uppercase tracking-wider"
                 >
                   Trial
@@ -301,6 +302,7 @@ const App: React.FC = () => {
       </main>
 
       <Footer />
+      <WhatsAppRedirectModal />
       
       {/* Scroll-to-top Button */}
       <button
@@ -318,9 +320,9 @@ const App: React.FC = () => {
       {/* WhatsApp Floating Button */}
       <a 
         href={WA_URL} 
-        target="_blank" 
+        target="_blank"
         rel="noopener noreferrer"
-        onClick={trackWhatsAppConversion}
+        onClick={(event) => handleWhatsAppClick(event, WA_URL)}
         className="fixed bottom-8 right-8 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.3)] hover:scale-110 hover:shadow-[0_6px_16px_rgba(37,211,102,0.4)] transition-all duration-300 group flex items-center justify-center"
         aria-label="Contact us on WhatsApp"
       >
