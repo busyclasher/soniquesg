@@ -5,16 +5,15 @@ Name of learner and age:
 
 Type of instrument intended to learn: (Electric guitar/Acoustic Guitar/Violin/Piano)
 
-Own the instrument?:
-(Yes/No)
+Own the instrument?: (Yes/No)
 
-Goals for learning the instrument  (Eg play specific genres/songs, prepare for grading, learn as a hobby):
+Goals for learning the instrument: (Eg prepare for grading, learn as a hobby)
 
-Prior music experience (If applicable)
-(Eg music CCA, have grading, self-taught, learnt other instruments):
+Favourite songs, artists, and/or genres:
 
-Preferred location:
-(Central/East/West/North/North-East)
+Prior music experience (If applicable): (Eg music CCA, have grading, self-taught, learnt other instruments)
+
+Preferred location: (Central/East/West/North/North-East)
 
 Anything else we should know?:`;
 
